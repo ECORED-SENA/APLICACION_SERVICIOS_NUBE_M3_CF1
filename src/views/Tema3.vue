@@ -8,14 +8,15 @@
         h1 Normalización
     .row.mt-4
       .col-12.col-lg-9
-        p La normalización es el procedimiento mediante el cual se aplican las reglas de mapeo o conversión de un modelo entidad-relación a un modelo relacional, es decir a tablas y relaciones, los principios rectores de este proceso son: no redundancia de datos (que no se repitan los datos) y la dependencia de los datos dependencia incoherente (una separación lógica de datos en tablas). 
-        p.mt-3 Los datos redundantes desperdician espacio en disco y crean problemas de mantenimiento. Por ejemplo, en la figura 20 se ve que los datos comunes de los clientes y los bancos están en la tabla persona, mientras que los datos que pertenecen exclusivamente a los empleados están en otra tabla que se relaciona con la de personas.
+        p La normalización es el procedimiento mediante el cual se aplican las reglas de mapeo o conversión de un modelo entidad-relación a un modelo relacional, es decir, a tablas y relaciones, los principios rectores de este proceso son: no redundancia de datos (que no se repitan los datos) y que la dependencia de datos sea coherente (una separación lógica de datos en tablas). 
+        p.mt-3 Los datos redundantes desperdician espacio en disco y crean problemas de mantenimiento. Por ejemplo, en la figura «Diagrama relacional 1:1» del punto anterior, se ve que los datos comunes de los clientes y los bancos están en la tabla persona, mientras que los datos que pertenecen exclusivamente a los empleados están en otra tabla que se relaciona con la de personas.
       .col-3.d-none.d-lg-block
         figure
           img(src="@/assets/template/tema-3-1.svg" alt="Texto que describa la imagen")
     p.mt-4 ¿Qué es una “dependencia incoherente”? Aunque resulta intuitivo para un usuario buscar en la tabla de persona el correo de un cliente en particular, es posible que no tenga sentido buscar en esa columna el salario del empleado que se relaciona con esos datos de la tabla persona, pues el salario del empleado está relacionado con la tabla empleado o depende de él. Las dependencias incoherentes pueden dificultar el acceso a los datos, ya que la ruta para encontrar los datos puede faltar o estar dañada    
     figure.mt-4
-      img(src="@/assets/template/tema-3-2.png" alt="Texto que describa la imagen")
+      .video
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/UhP_m7ghEN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     .h4.mt-5 Formas normales
     .tabla-b.color-acento-contenido.mb-0.mt-5
       table(style="border: solid 1px #e8e8e8;").text-center
@@ -33,21 +34,21 @@
                 ul.lista-ul
                   li.mb-0.d-block
                     .row
-                      .col-1.p-0
+                      .col-1
                         i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -55px; text-align: left;')
+                      .col-10.vinetas-lm
                         p.mb-2 Eliminar grupos de repetición en tablas individuales.
                   li.mb-0.d-block.mt-1
                     .row
-                      .col-1.p-0
+                      .col-1
                         i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -55px; text-align: left;')
+                      .col-10.vinetas-lm
                         p.mb-2 Crear una tabla independiente para cada conjunto de datos relacionados.
                   li.mb-0.d-block.mt-1
                     .row
-                      .col-1.p-0
+                      .col-1
                         i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -55px; text-align: left;')
+                      .col-10.vinetas-lm
                         p.mb-2 Identificar cada conjunto de datos relacionados con una clave primaria.
         tr
           th.text-center Segunda forma normal
@@ -57,15 +58,15 @@
                 ul.lista-ul
                   li.mb-0.d-block
                     .row
-                      .col-1.p-0
+                      .col-1
                         i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -55px; text-align: left;')
+                      .col-10.vinetas-lm
                         p.mb-2 Crear tablas independientes para conjuntos de valores que se aplican a varios registros.
                   li.mb-0.d-block.mt-1
                     .row
-                      .col-1.p-0
+                      .col-1
                         i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -55px; text-align: left;')
+                      .col-10.vinetas-lm
                         p.mb-2 Relacionar estas tablas con una clave foránea.
         tr
           th.text-center Tercera forma normal
@@ -75,9 +76,9 @@
                 ul.lista-ul
                   li.mb-0.d-block
                     .row
-                      .col-1.p-0
+                      .col-1
                         i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -55px; text-align: left;')
+                      .col-10.vinetas-lm
                         p.mb-2 Eliminar los campos que no dependen de la clave.
     p.mt-4 Hay una cuarta forma normal, también llamada forma normal de #[strong Boyce Codd (BCNF)], y una quinta forma normal, pero rara vez se consideran en un diseño práctico, solo agregan complejidad al sistema y no aportan un valor funcional que aporte a la solución del problema, por esta razón no será tratada.
     .titulo-segundo.mt-5
@@ -93,11 +94,11 @@
     .h4.mt-5.text-center Proveedores, productos y precios
     figure.mt-4
       img(src="@/assets/template/tema-3-4.png" alt="Texto que describa la imagen")
-    p.mt-4 El principio de no repetición de datos indica que se deben identificar todos los datos que se repiten y se puede en la siguiente figura, tenido en cuenta los colores de sombreado como se muestra, en la figura 21, es de notar que el nit_proveedor son iguales en todos registros que tienen el mismo valor de correo, nombres y teléfono. 
+    p.mt-4 El principio de no repetición de datos indica que se deben identificar todos los datos que se repiten y se puede ver en la siguiente figura, tenido en cuenta los colores de sombreado como se muestra, en la siguiente figura, es de notar que el nit_proveedor son iguales en todos los registros que tienen el mismo valor de correo, nombres y teléfono. 
     .h4.mt-5.text-center Dependencia de nit_proveedor con datos del proveedor
     figure.mt-4  
       img(src="@/assets/template/tema-3-5.png" alt="Texto que describa la imagen")
-    p.mt-4 También en la figura 22 la columna #[strong código_producto] es la misma para la columna producto, pero difiere del precio que cada proveedor ofrece del mismo.
+    p.mt-4 También en la figura a continuación la columna #[strong código_producto] es la misma para la columna producto, pero difiere del precio que cada proveedor ofrece del mismo.
     .h4.mt-5.text-center Dependencia de código_producto_ con datos del producto
     figure.mt-4
       img(src="@/assets/template/tema-3-6.png" alt="Texto que describa la imagen")
@@ -106,7 +107,7 @@
     figure.mt-4
       img(src="@/assets/template/tema-3-7.png" alt="Texto que describa la imagen")
     p.mt-4 En la siguiente tabla se observan las dependencias detectadas.
-    .h4.mt-5 Formas normales
+    .h6.mt-5 Dependencias funcionales
     .row.mt-4
       .col-10.col-md-8.offset-1.offset-md-2
         .tabla-b.color-acento-contenido.mb-0.mt-5
@@ -125,19 +126,19 @@
                     ul.lista-ul.mb-0
                       li.mb-0.d-block
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Correo
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Nombres
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Teléfono
@@ -149,7 +150,7 @@
                     ul.lista-ul
                       li.mb-0.d-block
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Producto
@@ -161,7 +162,7 @@
                     ul.lista-ul
                       li.mb-0.d-block
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Precio
@@ -170,11 +171,11 @@
         .cajon.color-secundario.bg-secundario-op10.p-4
           .h4 Definición formal DEPENDENCIA FUNCIONAL
           p.m-0 Se dice que un atributo X de una relación “depende funcionalmente” de otro atributo o conjunto de atributos Y de la relación si a todo valor (o valores del conjunto) Y le corresponde siempre el mismo valor de X.
-    p.mt-4 Las dependencias funcionales de la tabla 5 se pueden representar en modelo entidad relación, teniendo en cuenta que un proveedor puede suministrar muchos productos y, a su vez, un producto puede ser proveedor por más de un proveedor, y que por cada producto que es proveedor por un proveedor existe un precio. 
+    p.mt-4 Las dependencias funcionales de la tabla anterior se pueden representar en modelo entidad relación, teniendo en cuenta que un proveedor puede suministrar muchos productos y, a su vez, un producto puede ser proveedor por más de un proveedor, y que por cada producto que es proveedor por un proveedor existe un precio. 
     .h4.mt-5 Diagrama entidad relación dependencia funcional
     figure.mt-4
       img(src="@/assets/template/tema-3-8.png" alt="Texto que describa la imagen")
-    p.mt-4 Como se puede notar en la figura 24, la relación provee, cuando es mapeado a un diagrama relacional, se genera una tabla intermedia provee que debe tener un atributo adicional “precio”.
+    p.mt-4 Como se puede notar en la figura anterior, la relación provee, cuando es mapeado a un diagrama relacional, se genera una tabla intermedia provee que debe tener un atributo adicional “precio”.
     .h4.mt-5 Diagrama relacional dependencia funcional
     .row
       .col-12.col-md-8.offset-md-2
@@ -188,7 +189,7 @@
           .row.m-0.align-items-center.justify-content-between 
             .col-lg-8
               .bloque-texto-a__texto.p-4
-                p Hasta este punto se han examinado problemas concretos de las formas normales muy básicas y de la normalización. Ahora se estudiará el modo en que se encaja la normalización en proceso general de diseño de bases de datos se puede hacer de una de esas formas:  
+                p Hasta este punto se han examinado problemas concretos de las formas normales muy básicas y de la normalización. Ahora se estudiará el modo en que se encaja la normalización en un proceso general de diseño de bases de datos y se puede hacer de una de las siguientes formas:  
             .col-lg-4.mb-4.mb-lg-0
               figure
                 img(src="@/assets/template/tema-3-10.svg" alt="Texto que describa la imagen").w-75
@@ -206,7 +207,7 @@
           li 
             .lista-ol--cuadro__vineta
               span 3
-            | Se puede hacer un diseño ad hoc (para que cumpla el requerimiento) y se debe comprobar luego que satisface la forma normal deseada
+            | Se puede hacer un diseño ad hoc (para que cumpla el requerimiento) y se debe comprobar luego que satisface la forma normal deseada.
     p.mt-4 En el mundo práctico y en la medida que se tiene más experticia las opciones 2 y 3 son las más empleadas.
     p.mt-4 A continuación, se muestra un ejemplo completo de cómo abordar un problema de almacenamiento de datos y transformarlo en un modelo relacional, recogiendo los conceptos vistos hasta ahora, pasando de un diagrama entidad relación a un modelo relacional que es en todo caso el objetivo general de un diseño de base de datos
     .h4.mt-5 Problema:
@@ -233,6 +234,7 @@
         p.mt-3 La relación entre persona y estudiante corresponde al caso estudiado en las relaciones de uno a uno (entre persona y empleado del banco) de la figura 20. 
         p.mt-3 El tema se vuelve complejo porque se debe analizar si aplica lo mismo para autor:
         p.mt-3 Al mapear estas entidades a diagrama relacional resultan 3 tablas (estudiante, persona y autor), pero autor solo tendría una única columna y al no tener atributos adicionales relacionados con el autor es prácticamente lo mismo que tener la tabla persona, por lo tanto, no es conveniente dejarlo de esta forma y más bien relacionar la publicación directamente con la entidad persona.
+        p.mt-3 Se debe estudiar detenidamente el diagrama entidad relación, por varios minutos, asegúrese que comprende el porqué de cada elemento y su multiplicidad. Antes de continuar, realice a mano alzada diagrame el modelo relacional:
       .col-3.d-none.d-lg-block.align-self-center
         figure
           img(src="@/assets/template/tema-3-14.svg" alt="Texto que describa la imagen")
@@ -245,7 +247,7 @@
               figure
                 img(src="@/assets/template/tema-3-15.svg" alt="Texto que describa la imagen")
             .col-12.col-lg-9
-              p.m-0 Una relación de muchos a muchos (N:N) se convierte en una tabla cuya llave primaria es computar por las llaves foráneas de las otras dos tablas, Una relación de uno a muchos (1:N) se convierte en una columna  (llave foránea) de la tabla que tiene los muchos, y finalmente una relación de uno a uno (1:1) se convierte una columna en cualquier (llave foránea) de las dos tablas. 
+              p.m-0 Una relación de muchos a muchos (N:N) se convierte en una tabla cuya llave primaria es computar por las llaves foráneas de las otras dos tablas. Una relación de uno a muchos (1:N) se convierte en una columna  (llave foránea) de la tabla que tiene los muchos, y finalmente una relación de uno a uno (1:1) se convierte una columna en cualquier (llave foránea) de las dos tablas. 
     .h4.mt-5 Modelo entidad relación biblioteca
     figure
       img(src="@/assets/template/tema-3-16.png" alt="Texto que describa la imagen")
@@ -258,7 +260,7 @@
       #t_3_3.h4 3.3  Reglas de integridad
     figure.mt-5
       img(src="@/assets/template/tema-3-18.png" alt="Texto que describa la imagen")
-    p.mt-4 La calidad de los datos garantiza que los datos almacenados en la base de datos cumplan con los estándares y requisitos de la organización. En otras palabras, asegura el mantenimiento de la integridad de los datos en una base de datos. Al hacerlo, aplica un conjunto de reglas a un conjunto de datos completo o específico y se almacena en la base de datos de destino, por lo consiguiente, para garantizar la integridad se debe tener en cuenta: 
+    p.mt-4 Cuando se define un atributo, sin saber, se está escogiendo para él un dominio es decir un conjunto de valores que puede tener. Por ejemplo: en MySQL cuando se elige un atributo de tipo entero (INT) los posibles valores que puede tener esa columna van desde -2147483648 hasta 2147483647, es decir valores positivos o negativos, de manera que si se quieren sólo valores positivos se deben definirlos como entero sin signo (UNSIGNED INT), por lo tanto, los valores van desde 0 hasta 4294967295; en el siguiente enlace se puede ver un dato completo:
     .tarjeta.color-acento-botones.p-3.mt-5.bg-degradado-azul
       .row.justify-content-around.align-items-center
         .col-3.col-sm-2.col-lg-1
@@ -266,12 +268,11 @@
         .col
           .row.justify-content-between.align-items-center
             .col.mb-3.mb-sm-0.text-white
-              h3.mb-1 Tipos de enteros: 
-              p.text-small Tipos de enteros: https://dev.mysql.com/doc/refman/8.0/en/integer-types.html  
+              h3.mb-1 Tipos de enteros 
             .col-sm-auto
-              a.boton.color-acento-contenido(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank")
-                span Descargar
-                i.fas.fa-file-download
+              a.boton.color-acento-contenido(href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" target="_blank")
+                span Ver
+                i.fas.fa-link
     p.mt-4 La calidad de los datos garantiza que los datos almacenados en la base de datos cumplan con los estándares y requisitos de la organización. En otras palabras, asegura el mantenimiento de la integridad de los datos en una base de datos. Al hacerlo, aplica un conjunto de reglas a un conjunto de datos completo o específico y se almacena en la base de datos de destino, por lo consiguiente, para garantizar la integridad se debe tener en cuenta: 
     .row.mt-5
       .col-8.offset-2
@@ -282,11 +283,11 @@
           
           p.text-small(numero="2" titulo="Integridad de entidad") Ninguno de los atributos o columnas que componen una llave primaria debe ser NULO. Es decir, una clave primaria es irreducible para identificar de modo único una fila, el que sea irreducible significa que ningún subconjunto de la clave primaria sirve para identificar inequívocamente la dial: a la fila o tupla. Si se permitiera valor nulo en una columna que hace parte de la llave primaria, esta estaría contradiciendo la irreductibilidad de una llave primaria; esto no aplica para claves alternativas, solo para la clave primaria.
           
-          p.text-small(numero="3" titulo="Integridad referencia") Para esto se debe analizar el modelo de la figura 28 y en particular la relación entre las tablas persona y estudiante. Como se sabe, la tabla estudiante tiene una llave primaria que, a la vez, es una referencia de la tabla persona, en la siguiente figura se observa un ejemplo.
+          p.text-small(numero="3" titulo="Integridad referencia") Para esto se debe analizar el modelo de la figura «Modelo relacional» y en particular la relación entre las tablas persona y estudiante. Como se sabe, la tabla estudiante tiene una llave primaria que, a la vez, es una referencia de la tabla persona, en la siguiente figura se observa un ejemplo.
     .h4.mt-5 Error de integridad referencial
     figure.mt-4
       img(src="@/assets/template/tema-3-20.png" alt="Texto que describa la imagen")      
-    p.mt-4 En la figura 29, por cada estudiante (tabla estudiante) existe uno y solo un elemento en la tabla persona, de tal forma que un estudiante es la conjunción de ambas tablas por medio de la llave foránea (que a la vez es llave primaria) id_estudiante, pero ¿qué tal que no existiera? Eso significa que la base de datos es inconsistente o que tiene datos basura en la tabla estudiante. Afortunadamente los SGDB permiten definir reglas que impidan que esto ocurra en las tablas, es decir que no permita registrar un estudiante con id_estudiante con un valor que no existe en la columna id_persona de la tabla persona. 
+    p.mt-4 En la figura anterior, por cada estudiante (tabla estudiante) existe uno y solo un elemento en la tabla persona, de tal forma que un estudiante es la conjunción de ambas tablas por medio de la llave foránea (que a la vez es llave primaria) id_estudiante, pero ¿qué tal que no existiera? Eso significa que la base de datos es inconsistente o que tiene datos basura en la tabla estudiante. Afortunadamente los SGDB permiten definir reglas que impidan que esto ocurra en las tablas, es decir que no permita registrar un estudiante con id_estudiante con un valor que no existe en la columna id_persona de la tabla persona. 
     .row.mt-5
       .col-10.offset-1
         .bloque-texto-a.color-primario.p-4.p-md-5.mb-5 
@@ -302,6 +303,8 @@
       .col-10.col-md-8.offset-1.offset-md-2.borde-gris
         .row
           .col-2.col-md-3
+            figure
+              img(src="@/assets/template/tema-3-27.svg" alt="Texto que describa la imagen")
           .col
             .h4.mt-3 RESPUESTA 
             p.mt-2 La respuesta a las cuestiones planeadas es que en cualquiera de las operaciones de borrado o actualización del dato se incurrirá en una violación de la integridad referencial de la tabla estudiante, ya que no habrá manera de conocer los datos de complementarios del estudiante que se encuentran en la tabla persona. 
@@ -323,25 +326,25 @@
                     ul.lista-ul.mb-0
                       li.mb-0.d-block
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Restringir: no se permite borrar la fila referenciada.
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Cascada: se borra la fila referenciada y también se borran las filas que la referencian mediante la clave foránea en la otra tabla.
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Poner null: se borra la fila referenciada y las filas que la referenciaban ponen en nulo la clave foránea (solo si acepta nulos).
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Valor por defecto: se borra la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla.
@@ -354,25 +357,25 @@
                     ul.lista-ul.mb-0
                       li.mb-0.d-block
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Restringir: no se permite editar la fila referenciada.
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Cascada: se actualiza la fila referenciada y también se actualiza las filas que la referencian mediante la clave foránea en la otra tabla.
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Poner null: se actualiza la fila referenciada y las filas que la referenciaban ponen a nulo la clave foránea (solo si acepta nulos).
                       li.mb-0.d-block.mt-1
                         .row
-                          .col-1.p-0
+                          .col-1
                             i.fas.fa-angle-right.color-amarillo
                           .col-10.p-0(style='margin-left: -15px; text-align: left;')
                             p.mb-2 Valor por defecto: se edita la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla
@@ -386,14 +389,13 @@
     .col-10.col-md-8.offset-1.offset-md-2.mt-4
       figure
         img(src="@/assets/template/tema-3-26.png" alt="Texto que describa la imagen")
-    p.mt-4 Los sistemas gestores de bases de datos emplean un lenguaje que se denomina SQL que corresponde al nombre en inglés (Structured Query Language), Generalmente, cuando un SGBD relacional implementa el lenguaje SQL, todas las acciones, y operaciones se llevan a cabo en el sistema mediante sentencias de este lenguaje. Dentro de SQL hay varios tipos de sentencias que se agrupan en cuatro conjuntos.
     .row.mt-4
       .col-10.offset-1 
         .cajon.color-secundario.bg-secundario-op40.p-4
           .h4 Sentencias de definición de datos (DDL)
           p.mt-1 Son las sentencias que permiten crear tablas, alterar su definición y eliminarlas. En una base de datos relacional existen otros tipos de objetos además de las tablas, como las vistas, los índices y los disparadores. Las sentencias para crear, alterar y eliminar vistas e índices también pertenecen a este conjunto de sentencia se les denomina #[strong DDL] del inglés #[strong D]ata #[strong D]efinition #[strong L]anguage.
           .h5.mt-3 Ejemplo DDL
-          p.mt-1 Para crear la tabla persona de la figura 28, quedaría de la siguiente forma: 
+          p.mt-1 Para crear la tabla persona de la figura «Modelo relacional», quedaría de la siguiente forma: 
     .row.mt-5
       .col-8.col-md-6.py-4.px-5.bg-gris.offset-2.offset-md-3
         p.mb-2 #[strong CREATE TABLE] persona (

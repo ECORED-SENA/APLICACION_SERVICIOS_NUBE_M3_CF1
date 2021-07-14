@@ -74,7 +74,7 @@ export default {
           {
             icono: 'far fa-file-alt',
             numero: '2.3',
-            titulo: 'Relaciones de un uno a muchos',
+            titulo: 'Relaciones de muchos a muchos',
             hash: 't_2_3',
           },
           {
@@ -228,45 +228,93 @@ export default {
     },
   ],
   creditos: {
-    liderEquipo: {
-      nombre: 'Rafael Neftalí Lizcano Reyes',
-      cargo: 'Asesor pedagógico ',
-      centro: 'Centro Industrial del Diseño y la Manufactura',
-      regional: 'Regional Santander',
-    },
+    liderEquipo: [
+      {
+        nombre: 'Maria Camila García Santamaría',
+        cargo: 'Líder del equipo',
+        centro: 'Dirección General',
+      },
+    ],
     contenidoInstruccional: [
       {
+        nombre: 'Rafael Nelftalí Lizcano Reyes',
+        cargo: 'Asesor metodológico y pedagógico',
+        centro:
+          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+      },
+      {
         nombre: 'Henry Eduardo Bastidas Paruma',
-        cargo: 'Experto Temático',
-        centro: 'Centro de teleinformática y producción industrial',
-        regional: 'Regional Cauca',
+        cargo: 'Experto tematico',
+        centro:
+          'Regional Cauca - Centro de teleinformática y producción industrial',
       },
       {
         nombre: 'Peter Emerson Pinchao Solís',
-        cargo: 'Experto Temático',
-        centro: 'Centro de teleinformática y producción industrial',
-        regional: 'Regional Cauca',
+        cargo: 'Experto tematico',
+        centro:
+          'Regional Cauca - Centro de teleinformática y producción industrial',
       },
-    ],
-    desarrolloProducto: [
       {
         nombre: 'Oscar Absalón Guevara',
         cargo: 'Diseñador instruccional',
-        centro: 'Centro Gestión Industrial.',
+        centro: 'Centro de Gestión Industrial',
       },
       {
         nombre: 'José Gabriel Ortiz Abella',
         cargo: 'Corrector de estilo',
-        centro: 'Centro de la Industria de la Comunicación Gráfica',
-        regional: 'Regional Distrito Capital.',
+        centro:
+          'Regional Distrito Capital - Centro de la Industria de la Comunicación Gráfica',
+      },
+    ],
+    desarrolloProducto: [
+      {
+        nombre: 'Francisco José Lizcano Reyes',
+        cargo: 'Responsable del equipo',
+        centro:
+          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+      },
+      {
+        nombre: 'Leyson Fabian Castaño Perez',
+        cargo: 'Soporte organizacional',
+        centro: 'Regional Tolima - Centro de Comercio y Servicios',
+      },
+      {
+        nombre: ['Luis Fernando Sarmiento Betancourth'],
+        cargo: 'Diseño web',
+        centro:
+          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+      },
+      {
+        nombre: [
+          'Zuleidy Maria Ruiz Torres',
+          'Wilson Andrés Arenales Cáceres',
+          'Gilberto Junior Rodríguez Rodríguez',
+          'María Carolina Tamayo Lopez ',
+          'José Jaime Luis Tang Pinzón',
+          'Oleg Litvin',
+        ],
+        cargo: 'Producción audiovisual',
+        centro:
+          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+      },
+      {
+        nombre: 'Lizeth Karina Manchego Suárez',
+        cargo: 'Desarrollo front-end',
+        centro:
+          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+      },
+      {
+        nombre: 'Jhana Johanna Bustillo Ardila',
+        cargo: 'Validación de diseño y contenido',
+        centro:
+          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
       },
     ],
     gestoresRepositorio: [
       {
-        nombre: 'Brayan Stiven Pinto Diaz',
-        cargo: ['Desarrollo front-end', 'Validación de recursos'],
-        centro: 'Centro de comercio y servicios',
-        regional: 'Regional Tolima',
+        nombre: 'Milady Tatiana Villamil Castellanos',
+        cargo: ['Validación y vinculación en plataforma LMS'],
+        centro: 'Regional Tolima - Centro de Comercio y Servicios',
       },
     ],
   },
