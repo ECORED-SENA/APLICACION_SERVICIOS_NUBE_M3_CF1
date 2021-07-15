@@ -19,67 +19,69 @@
         iframe(width="560" height="315" src="https://www.youtube.com/embed/UhP_m7ghEN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     .h4.mt-5 Formas normales
     .tabla-b.color-acento-contenido.mb-0.mt-5
-      table(style="border: solid 1px #e8e8e8;").text-center
-        caption.mt-3 Referencia Tabla - Norma APA
-        tr.bg-secundario.text-white.text-center
-          th(style="width: 245px;")
-            .h4.mb-0.text-center Forma normal
-          td 
-            .h4.mb-0.text-center Principios
-        tr
-          th.text-center Primera forma normal
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.vinetas-lm
-                        p.mb-2 Eliminar grupos de repetición en tablas individuales.
-                  li.mb-0.d-block.mt-1
-                    .row
-                      .col-1
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.vinetas-lm
-                        p.mb-2 Crear una tabla independiente para cada conjunto de datos relacionados.
-                  li.mb-0.d-block.mt-1
-                    .row
-                      .col-1
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.vinetas-lm
-                        p.mb-2 Identificar cada conjunto de datos relacionados con una clave primaria.
-        tr
-          th.text-center Segunda forma normal
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.vinetas-lm
-                        p.mb-2 Crear tablas independientes para conjuntos de valores que se aplican a varios registros.
-                  li.mb-0.d-block.mt-1
-                    .row
-                      .col-1
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.vinetas-lm
-                        p.mb-2 Relacionar estas tablas con una clave foránea.
-        tr
-          th.text-center Tercera forma normal
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.vinetas-lm
-                        p.mb-2 Eliminar los campos que no dependen de la clave.
+    .row
+      .col-12
+        table(style="border: solid 1px #e8e8e8;").text-center
+          caption.mt-3 Referencia Tabla - Norma APA
+          tr.bg-secundario.text-white.text-center
+            th.width-table-formas
+              .h4.mb-0.text-center Forma normal
+            td 
+              .h4.mb-0.text-center Principios
+          tr
+            th.text-center Primera forma normal
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vinetas-lm
+                          p.mb-2 Eliminar grupos de repetición en tablas individuales.
+                    li.mb-0.d-block.mt-1
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vinetas-lm
+                          p.mb-2 Crear una tabla independiente para cada conjunto de datos relacionados.
+                    li.mb-0.d-block.mt-1
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vinetas-lm
+                          p.mb-2 Identificar cada conjunto de datos relacionados con una clave primaria.
+          tr
+            th.text-center Segunda forma normal
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vinetas-lm
+                          p.mb-2 Crear tablas independientes para conjuntos de valores que se aplican a varios registros.
+                    li.mb-0.d-block.mt-1
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vinetas-lm
+                          p.mb-2 Relacionar estas tablas con una clave foránea.
+          tr
+            th.text-center Tercera forma normal
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vinetas-lm
+                          p.mb-2 Eliminar los campos que no dependen de la clave.
     p.mt-4 Hay una cuarta forma normal, también llamada forma normal de #[strong Boyce Codd (BCNF)], y una quinta forma normal, pero rara vez se consideran en un diseño práctico, solo agregan complejidad al sistema y no aportan un valor funcional que aporte a la solución del problema, por esta razón no será tratada.
     .titulo-segundo.mt-5
       #t_3_1.h4 3.1  Dependencias funcionales
@@ -94,7 +96,7 @@
     .h4.mt-5.text-center Proveedores, productos y precios
     figure.mt-4
       img(src="@/assets/template/tema-3-4.png" alt="Texto que describa la imagen")
-    p.mt-4 El principio de no repetición de datos indica que se deben identificar todos los datos que se repiten y se puede ver en la siguiente figura, tenido en cuenta los colores de sombreado como se muestra, en la siguiente figura, es de notar que el nit_proveedor son iguales en todos los registros que tienen el mismo valor de correo, nombres y teléfono. 
+    p.mt-4 El principio de no repetición de datos indica que se deben identificar todos los datos que se repiten y se puede ver en la siguiente figura, tenido en cuenta los colores de sombreado como se muestra, es de notar que el nit_proveedor son iguales en todos los registros que tienen el mismo valor de correo, nombres y teléfono. 
     .h4.mt-5.text-center Dependencia de nit_proveedor con datos del proveedor
     figure.mt-4  
       img(src="@/assets/template/tema-3-5.png" alt="Texto que describa la imagen")
@@ -111,65 +113,67 @@
     .row.mt-4
       .col-10.col-md-8.offset-1.offset-md-2
         .tabla-b.color-acento-contenido.mb-0.mt-5
-          table(style="border: solid 1px #e8e8e8;").text-center
-            caption.mt-3 Referencia Tabla - Norma APA
-            tr.bg-amarillo.text-center
-              th(style="width: 245px;")
-                .h4.mb-0.text-center Atributo
-              td 
-                .h4.mb-0.text-center Es dependencia funcional de: 
-            tr
-              th.text-center nit_proveedor 
-              td 
-                .row
-                  .col-sm.mb-5.mb-sm-0
-                    ul.lista-ul.mb-0
-                      li.mb-0.d-block
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
-                            p.mb-2 Correo
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
-                            p.mb-2 Nombres
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
-                            p.mb-2 Teléfono
-            tr
-              th.text-center codigo_producto
-              td 
-                .row
-                  .col-sm.mb-5.mb-sm-0
-                    ul.lista-ul
-                      li.mb-0.d-block
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
-                            p.mb-2 Producto
-            tr
-              th.text-center nit_proveedor, codigo_producto  
-              td 
-                .row
-                  .col-sm.mb-5.mb-sm-0
-                    ul.lista-ul
-                      li.mb-0.d-block
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
-                            p.mb-2 Precio
+        .row
+          .col-12
+            table(style="border: solid 1px #e8e8e8;word-wrap: break-word;").text-center
+              caption.mt-3 Referencia Tabla - Norma APA
+              tr.bg-amarillo.text-center
+                th.width-table-formas
+                  .h4.mb-0.text-center Atributo
+                td 
+                  .h4.mb-0.text-center Es dependencia funcional de: 
+              tr
+                th.text-center nit_proveedor 
+                td 
+                  .row
+                    .col-sm.mb-5.mb-sm-0
+                      ul.lista-ul.mb-0
+                        li.mb-0.d-block
+                          .row
+                            .col-1
+                              i.fas.fa-angle-right.color-amarillo
+                            .col-8
+                              p.mb-2 Correo
+                        li.mb-0.d-block.mt-1
+                          .row
+                            .col-1
+                              i.fas.fa-angle-right.color-amarillo
+                            .col-8
+                              p.mb-2 Nombres
+                        li.mb-0.d-block.mt-1
+                          .row
+                            .col-1
+                              i.fas.fa-angle-right.color-amarillo
+                            .col-8
+                              p.mb-2 Teléfono
+              tr
+                th.text-center codigo_producto
+                td 
+                  .row
+                    .col-sm.mb-5.mb-sm-0
+                      ul.lista-ul
+                        li.mb-0.d-block
+                          .row
+                            .col-1
+                              i.fas.fa-angle-right.color-amarillo
+                            .col-8
+                              p.mb-2 Producto
+              tr
+                th.text-center nit_proveedor, codigo_producto  
+                td 
+                  .row
+                    .col-sm.mb-5.mb-sm-0
+                      ul.lista-ul
+                        li.mb-0.d-block
+                          .row
+                            .col-1
+                              i.fas.fa-angle-right.color-amarillo
+                            .col-8
+                              p.mb-2 Precio
     .row.mt-5
       .col-8.offset-2 
         .cajon.color-secundario.bg-secundario-op10.p-4
-          .h4 Definición formal DEPENDENCIA FUNCIONAL
+          .h4 Definición formal dependencia funcional
           p.m-0 Se dice que un atributo X de una relación “depende funcionalmente” de otro atributo o conjunto de atributos Y de la relación si a todo valor (o valores del conjunto) Y le corresponde siempre el mismo valor de X.
     p.mt-4 Las dependencias funcionales de la tabla anterior se pueden representar en modelo entidad relación, teniendo en cuenta que un proveedor puede suministrar muchos productos y, a su vez, un producto puede ser proveedor por más de un proveedor, y que por cada producto que es proveedor por un proveedor existe un precio. 
     .h4.mt-5 Diagrama entidad relación dependencia funcional
@@ -287,7 +291,7 @@
     .h4.mt-5 Error de integridad referencial
     figure.mt-4
       img(src="@/assets/template/tema-3-20.png" alt="Texto que describa la imagen")      
-    p.mt-4 En la figura anterior, por cada estudiante (tabla estudiante) existe uno y solo un elemento en la tabla persona, de tal forma que un estudiante es la conjunción de ambas tablas por medio de la llave foránea (que a la vez es llave primaria) id_estudiante, pero ¿qué tal que no existiera? Eso significa que la base de datos es inconsistente o que tiene datos basura en la tabla estudiante. Afortunadamente los SGDB permiten definir reglas que impidan que esto ocurra en las tablas, es decir que no permita registrar un estudiante con id_estudiante con un valor que no existe en la columna id_persona de la tabla persona. 
+    p.mt-4 En la figura anterior, por cada estudiante (tabla estudiante) existe uno y solo un elemento en la tabla persona, de tal forma que un estudiante es la conjunción de ambas tablas por medio de la llave foránea (que a la vez es llave primaria) id_estudiante, pero ¿qué tal que no existiera? Eso significa que la base de datos es inconsistente o que tiene datos basura en la tabla estudiante. Afortunadamente los SGDB permiten definir reglas que impidan que esto ocurra en las tablas, es decir, que no permita registrar un estudiante con id_estudiante con un valor que no existe en la columna id_persona de la tabla persona. 
     .row.mt-5
       .col-10.offset-1
         .bloque-texto-a.color-primario.p-4.p-md-5.mb-5 
@@ -298,7 +302,7 @@
             .col-lg-8
               .bloque-texto-a__texto.p-4
                 .h4 Pregunta de análisis de datos 
-                p.mt-1 Ahora hay que preguntarse lo siguiente: ¿qué pasaría si se borra el registro de la tabla persona que tiene id_persona con valor tres (3) sufrirá algún problema los datos de la tabla estudiante?, o que pasaría si se cambia el valor de tres (3) en la columna id_persona, por otro valor como por ejemplo nueve (9), antes de continuar, hay que tomarse unos minutos para pensarlo. 
+                p.mt-1 Ahora hay que preguntarse lo siguiente: ¿qué pasaría si se borra el registro de la tabla persona que tiene id_persona con valor tres (3), sufrirá algún problema los datos de la tabla estudiante?, o ¿qué pasaría si se cambia el valor de tres (3) en la columna id_persona, por otro valor como por ejemplo nueve (9)?, antes de continuar, hay que tomarse unos minutos para pensarlo. 
     .row.mt-5
       .col-10.col-md-8.offset-1.offset-md-2.borde-gris
         .row
@@ -306,7 +310,7 @@
             figure
               img(src="@/assets/template/tema-3-27.svg" alt="Texto que describa la imagen")
           .col
-            .h4.mt-3 RESPUESTA 
+            .h4.mt-3 Respuesta 
             p.mt-2 La respuesta a las cuestiones planeadas es que en cualquiera de las operaciones de borrado o actualización del dato se incurrirá en una violación de la integridad referencial de la tabla estudiante, ya que no habrá manera de conocer los datos de complementarios del estudiante que se encuentran en la tabla persona. 
             p.mt-3 Para evitar estos problemas de inconsistencia, los sistemas gestores de bases de datos permiten definir unas reglas cuando se borra o actualiza un dato que es referencia foránea de otra tabla. 
     .tabla-a.color-secundario.mt-5 
@@ -328,25 +332,25 @@
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Restringir: no se permite borrar la fila referenciada.
                       li.mb-0.d-block.mt-1
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Cascada: se borra la fila referenciada y también se borran las filas que la referencian mediante la clave foránea en la otra tabla.
                       li.mb-0.d-block.mt-1
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Poner null: se borra la fila referenciada y las filas que la referenciaban ponen en nulo la clave foránea (solo si acepta nulos).
                       li.mb-0.d-block.mt-1
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Valor por defecto: se borra la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla.
             td.p-0
               figure
@@ -359,25 +363,25 @@
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Restringir: no se permite editar la fila referenciada.
                       li.mb-0.d-block.mt-1
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Cascada: se actualiza la fila referenciada y también se actualiza las filas que la referencian mediante la clave foránea en la otra tabla.
                       li.mb-0.d-block.mt-1
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Poner null: se actualiza la fila referenciada y las filas que la referenciaban ponen a nulo la clave foránea (solo si acepta nulos).
                       li.mb-0.d-block.mt-1
                         .row
                           .col-1
                             i.fas.fa-angle-right.color-amarillo
-                          .col-10.p-0(style='margin-left: -15px; text-align: left;')
+                          .col-10.vineta-lm
                             p.mb-2 Valor por defecto: se edita la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla
     p.mt-4 De esta forma, una vez definida la estructura del modelo de datos de datos, se debe determinar el comportamiento de estas operaciones, lo cual generalmente responde a requerimiento del sistema de información. 
     .titulo-segundo.mt-5

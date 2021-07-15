@@ -240,19 +240,19 @@ export default {
         nombre: 'Rafael Nelftalí Lizcano Reyes',
         cargo: 'Asesor metodológico y pedagógico',
         centro:
-          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
       },
       {
         nombre: 'Henry Eduardo Bastidas Paruma',
         cargo: 'Experto tematico',
         centro:
-          'Regional Cauca - Centro de teleinformática y producción industrial',
+          'Centro de teleinformática y producción industrial - Regional Cauca',
       },
       {
         nombre: 'Peter Emerson Pinchao Solís',
         cargo: 'Experto tematico',
         centro:
-          'Regional Cauca - Centro de teleinformática y producción industrial',
+          'Centro de teleinformática y producción industrial - Regional Cauca',
       },
       {
         nombre: 'Oscar Absalón Guevara',
@@ -263,7 +263,7 @@ export default {
         nombre: 'José Gabriel Ortiz Abella',
         cargo: 'Corrector de estilo',
         centro:
-          'Regional Distrito Capital - Centro de la Industria de la Comunicación Gráfica',
+          'Centro de la Industria de la Comunicación Gráfica - Regional Distrito Capital',
       },
     ],
     desarrolloProducto: [
@@ -271,50 +271,54 @@ export default {
         nombre: 'Francisco José Lizcano Reyes',
         cargo: 'Responsable del equipo',
         centro:
-          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
       },
       {
         nombre: 'Leyson Fabian Castaño Perez',
         cargo: 'Soporte organizacional',
-        centro: 'Regional Tolima - Centro de Comercio y Servicios',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
       },
       {
         nombre: ['Luis Fernando Sarmiento Betancourth'],
         cargo: 'Diseño web',
         centro:
-          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
+      },
+      {
+        nombre: 'Zuleidy Maria Ruiz Torres',
+        cargo: 'Producción audiovisual',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
       },
       {
         nombre: [
-          'Zuleidy Maria Ruiz Torres',
-          'Wilson Andrés Arenales Cáceres',
           'Gilberto Junior Rodríguez Rodríguez',
-          'María Carolina Tamayo Lopez ',
           'José Jaime Luis Tang Pinzón',
+          'María Carolina Tamayo Lopez ',
           'Oleg Litvin',
+          'Wilson Andrés Arenales Cáceres',
         ],
         cargo: 'Producción audiovisual',
         centro:
-          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
       },
       {
         nombre: 'Lizeth Karina Manchego Suárez',
         cargo: 'Desarrollo front-end',
         centro:
-          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
       },
       {
         nombre: 'Jhana Johanna Bustillo Ardila',
         cargo: 'Validación de diseño y contenido',
         centro:
-          'Regional Santander - Centro Industrial del Diseño y la Manufactura',
+          'Centro Industrial del Diseño y la Manufactura - Regional Santander',
       },
     ],
     gestoresRepositorio: [
       {
         nombre: 'Milady Tatiana Villamil Castellanos',
         cargo: ['Validación y vinculación en plataforma LMS'],
-        centro: 'Regional Tolima - Centro de Comercio y Servicios',
+        centro: 'Centro de Comercio y Servicios - Regional Tolima',
       },
     ],
   },

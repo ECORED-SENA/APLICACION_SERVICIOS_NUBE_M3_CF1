@@ -8,7 +8,7 @@
       h1 	Modelo entidad relación
     .row.mt-5
       .col-12.col-lg-10.align-self-center
-        p Una base de datos se puede percibir como un “almacén” de información que se define y se crea una sola vez para guardar grandes cantidades de datos de forma organizada (o estructurada), con el fin de poder encontrarla y utilizarla fácilmente. Se presentará el concepto y características de las bases de datos actuales, teniendo en cuenta que cada base de datos es diseñada para cumplir con los requisitos de información de una organización o una empresa. Estos diseños están concebidos para emplear Sistemas de Gestión de Bases de Datos (en adelante SGDB), que es un sistema o servicio informático que permite a las personas definir, crear, dar soporte y mantenimiento a las bases de datos, controlando el acceso de forma segura.
+        p Las bases de datos relaciones, inicialmente no son fáciles de modelar, por lo que se requiere de cierto nivel de abstracción, es decir, se va ocultando la complejidad del diseño de la base de datos, primero analizando el requerimiento desde un punto de vista conceptual, entendido como las necesidades de la empresa o del sistema de información, luego se va analizando desde el punto de vista de la lógica de los datos y, finalmente, se analiza físicamente como se almacenarán los datos; para lo anterior aquí se presentan algunos conceptos.
       .col-2.d-none.d-md-block
         figure
           img(src="@/assets/template/tema-2-1.svg" alt="Texto que describa la imagen")
@@ -66,7 +66,7 @@
       .col-8.offset-2 
         .cajon.color-secundario.bg-secundario-op10.p-4
           .h4 d. Tupla
-          p.m-0 Las tablas de la figura anterior muestran cada uno de los conjuntos de registros, la “tabla persona” muestra 6 registros y la “tabla cuenta” muestra 9 de ellas, cada uno de estos registros representa un objeto, es decir, de la tabla persona hay 6 (objetos) o personas. A la agrupación de los datos de cada registro se le llama TUPLA y, en términos sencillos, una TUPLA de una base datos es el conjunto de todos los atributos (columnas) de una fila.
+          p.m-0 Las tablas de la figura anterior muestran cada uno de los conjuntos de registros, la “tabla persona” muestra 6 registros y la “tabla cuenta” muestra 9 de ellas, cada uno de estos registros representa un objeto, es decir, de la tabla persona hay 6 (objetos) o personas. A la agrupación de los datos de cada registro se le llama TUPLA y, en términos sencillos, una TUPLA de una base de datos es el conjunto de todos los atributos (columnas) de una fila.
     .titulo-segundo.mt-5
       #t_2_1.h4 2.1  Relaciones entre entidades
     p.mt-4 Como se observa en las figuras del anterior punto, una entidad se puede representar con una tabla, sin embargo, la relación #[strong titular] aún no se sabe cómo representarla y para ello se debe definir algunas propiedades de los atributos. 
@@ -132,7 +132,7 @@
         .cajon.color-secundario.bg-secundario-op10.p-4
           .h4 REGLA DE MAPEO 1:N de Modelo entidad-relación a modelo relacional: 
           p.m-0 Una relación de uno a mucho (1:N) se transforma en una columna en la tabla que tiene la multiplicidad de los muchos (cuenta). Y todos los datos de esta columna existen como llave primaria en la tabla que tiene la multiplicidad uno (tabla persona).
-    p.mt-4 Existe otro tipo de diagrama y que es más empleado a la hora de diseñar una base datos, este diagrama se llama “Diagrama relacional”, donde las entidades se presentan como tablas de una vez y las relaciones son más claras. A continuación, se observa la representación del diagrama entidad relación de la figura a un diagrama relacional. 
+    p.mt-4 Existe otro tipo de diagrama y que es más empleado a la hora de diseñar una base de datos, este diagrama se llama “Diagrama relacional”, donde las entidades se presentan como tablas de una vez y las relaciones son más claras. A continuación, se observa la representación del diagrama entidad relación de la figura a un diagrama relacional. 
     .h6.mt-5 Diagrama relacional 1:N
     .row.mt-4
       .col-8.col-lg-6.offset-2.offset-lg-0
@@ -206,7 +206,7 @@
               .col-11.vinetas-lm
                 p.mb-2 Almacenar información que solo se aplique a un subconjunto de la tabla principal.
     p.mt-4 Volviendo al ejemplo del banco, esta vez se supone que la empresa necesita información sobre sus empleados lo que, a la vez, pueden ser clientes del banco.
-    .h6.mt-5 Diagrama entidad realación persona-empleado
+    .h6.mt-5 Diagrama entidad relación persona-empleado
     figure
       img(src="@/assets/template/tema-2-16.png" alt="Texto que describa la imagen")
     .row.mt-4

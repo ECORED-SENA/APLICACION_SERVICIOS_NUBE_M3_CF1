@@ -12,7 +12,7 @@
     p.mt-4 Para organizar y definir la información de forma sistemática, las bases de datos también deben poder almacenar una descripción precisa de los datos que contiene conocida como #[strong metadatos] a los que se le relaciona el tipo de información que conceptualmente guardada (es decir si se agrega una explicación de la naturaleza del dato en la empresa) se da origen a lo que conoce como #[strong diccionario de datos o catálogo de datos].
     p.h4.mt-5 Ejemplo 1
     .h4.mt-5 Determinar los metadatos del siguiente problema 
-    p.mt-4 Una empresa tiene una base datos de llamadas telefónicas que entran y salen de su planta telefónica donde se relacionan los números de teléfonos del llamante y la extensión telefónica que recibe o hace la llamada, la fecha y la hora de la llamada, si fue o no atendida, y la duración de la misma como se muestra en la siguiente figura.
+    p.mt-4 Una empresa tiene una base de datos de llamadas telefónicas que entran y salen de su planta telefónica donde se relacionan los números de teléfonos del llamante y la extensión telefónica que recibe o hace la llamada, la fecha y la hora de la llamada, si fue o no atendida, y la duración de la misma como se muestra en la siguiente figura.
     .h4.mt-5 Base de datos de llamadas telefónicas
     .row.mt-5
       .col-6
@@ -24,7 +24,7 @@
           .row.m-0.align-items-center.justify-content-between 
             .col-lg-8
               .bloque-texto-a__texto.p-4
-                p #[strong NOTA IMPORTANTE: la figura ] muestra una tabla de datos que tiene las características de que en cada columna se agrupa un tipo de dato particular, y cada fila es el conjunto de datos que se llama registro y comparten una relación (la relación es que cada fila corresponde a una única llamada telefónica), a esta estructura se le llama bidimensional; aquí filas y columnas son las dos dimensiones. 
+                p #[strong La figura ] muestra una tabla de datos que tiene las características de que en cada columna se agrupa un tipo de dato particular, y cada fila es el conjunto de datos que se llama registro y comparten una relación (la relación es que cada fila corresponde a una única llamada telefónica), a esta estructura se le llama bidimensional; aquí filas y columnas son las dos dimensiones. 
             .col-lg-4.mb-4.mb-lg-0
               figure
                 img(src="@/assets/template/tema-1-3.svg" alt="Texto que describa la imagen").w-75
@@ -37,37 +37,37 @@
             .row
               .col-1
                 i.fas.fa-angle-right.color-azul.text-center
-              .col-11.position-absolute.mx-4
+              .col-11.vinetas-lm
                 p.mb-2 YYYY sería el año un dato numérico entero de cuatro dígitos.
           li.mb-0.d-block.mt-1
             .row
               .col-1
                 i.fas.fa-angle-right.color-azul.text-center
-              .col-11.position-absolute.mx-4
+              .col-11.vinetas-lm
                 p.mb-2 MM el mes un dato numérico entero de dos dígitos entre 01 y 12.
           li.mb-0.d-block.mt-1
             .row
               .col-1
                 i.fas.fa-angle-right.color-azul.text-center
-              .col-11.position-absolute.mx-4
+              .col-11.vinetas-lm
                 p.mb-2 DD un dato numérico entero de dos dígitos entre 01 y 31
           li.mb-0.d-block.mt-1
             .row
               .col-1
                 i.fas.fa-angle-right.color-azul.text-center
-              .col-11.position-absolute.mx-4
+              .col-11.vinetas-lm
                 p.mb-2 HH un dato numérico de dos dígitos entre 00 y 23.
           li.mb-0.d-block.mt-1
             .row
               .col-1
                 i.fas.fa-angle-right.color-azul.text-center
-              .col-11.position-absolute.mx-4
+              .col-11.vinetas-lm
                 p.mb-2 MI y SS un dato numérico de dos dígitos entre 00 y 59
           li.mb-0.d-block.mt-1
             .row
               .col-1
                 i.fas.fa-angle-right.color-azul.text-center
-              .col-11.position-absolute.mx-4
+              .col-11.vinetas-lm
                 p.mb-2 Z un dato numérico de un digito (para representar milésimas de segundo).
     p.mt-4 Como este es el conjunto de datos de la primera columna puede que use un término que describa lo anterior con una sola palabra que es #[strong TIMESTAMP], de esta forma esa primera columna puede quedar correctamente descrita como:
     .row.mt-4
@@ -81,10 +81,10 @@
         .cajon.color-acento-contenido.p-4
           .row
             .col-4
-              p.m-0 #[strong src VARCHAR(25)] 
-              p.m-0 #[strong dst VARCHAR(25)]
+              p.m-0(style="word-wrap: break-word;") #[strong src VARCHAR(25)] 
+              p.m-0(style="word-wrap: break-word;") #[strong dst VARCHAR(25)]
             .col-8
-              p.m-0 De esta forma decimos que es una cadena de caracteres que varía en longitud de 0 a 25 caracteres.
+              p.m-0(style="word-wrap: break-word;") De esta forma decimos que es una cadena de caracteres que varía en longitud de 0 a 25 caracteres.
     p.mt-5 #[strong duration:] tiene la estructura HH:MI:SS y como se vio antes representa el tiempo en horas, minutos y segundos:
     .row.mt-4
       .col-8.offset-2
@@ -107,51 +107,53 @@
     .tabla-b.color-acento-contenido.mb-0
       .tabla-b__header.bg-secundario
         h5.mb-0.text-white Diccionario de datos base de llamadas telefónicas
-      table
-        tr
-          th NOMBRE
-          td(colspan='3') Base datos de llamadas telefónicas
-        tr
-          th CREACIÓN
-          td(colspan='3') 27/02/2021
-        tr
-          th DESCRIPCIÓN
-          td(colspan='3') Registro de las llamadas telefónicas de la PBX de la empresa STD LTDA.
-        tr.bg-secundario.text-white.text-center
-          th 
-            .h4.mb-0 CAMPO 
-          th 
-            .h4.mb-0 TIPO DATO
-          th 
-            .h4.mb-0 TAMAÑO
-          th 
-            .h4.mb-0 DESCRIPCIÓN
+    .row
+      .col-12
+        table
+          tr
+            th Nombre
+            td(colspan='3') Base de datos de llamadas telefónicas
+          tr
+            th Creación
+            td(colspan='3') 27/02/2021
+          tr
+            th(style="word-wrap: break-word;")  Descripción
+            td(colspan='3') Registro de las llamadas telefónicas de la PBX de la empresa STD LTDA.
+          tr.bg-secundario.text-white.text-center
+            th(style="word-wrap: break-word;") 
+              .h4.mb-0 Campo 
+            th(style="word-wrap: break-word;") 
+              .h4.mb-0 Tipo dato
+            th(style="word-wrap: break-word;") 
+              .h4.mb-0 Tamaño
+            th(style="word-wrap: break-word;") 
+              .h4.mb-0 Descripción
 
-        tr.text-center
-          th calldate
-          td TIMESTAMP
-          td 1
-          td Representa el momento exacto en que entra o sale la llamada
-        tr.text-center
-          th src
-          td VARCHAR
-          td 25
-          td Fuente (source) de la llamada, número de quien hace la llamada telefónica
-        tr.text-center
-          th dst
-          td VARCHAR
-          td 25
-          td Número del destino de la llamada telefónica
-        tr.text-center
-          th duration
-          td TIME
-          td 0
-          td Duración de la llamada telefónica
-        tr.text-center
-          th disposition
-          td VARCHAR
-          td 10
-          td Estado final en que se considera quedó la llamada
+          tr(style="word-wrap: break-word;").text-center
+            th calldate
+            td TIMESTAMP
+            td 1
+            td Representa el momento exacto en que entra o sale la llamada
+          tr(style="word-wrap: break-word;").text-center
+            th src
+            td VARCHAR
+            td 25
+            td Fuente (source) de la llamada, número de quien hace la llamada telefónica
+          tr(style="word-wrap: break-word;").text-center
+            th dst
+            td VARCHAR
+            td 25
+            td Número del destino de la llamada telefónica
+          tr(style="word-wrap: break-word;").text-center
+            th duration
+            td TIME
+            td 0
+            td Duración de la llamada telefónica
+          tr(style="word-wrap: break-word;").text-center
+            th disposition
+            td VARCHAR
+            td 10
+            td Estado final en que se considera quedó la llamada
     p.mt-5 Como se puede notar en la tabla anterior, un diccionario de datos aporta información de la estructura de los datos y el uso que se da a cada dato en la empresa, organización o sistema de información, pero no sin antes darle un nombre a todo el conjunto de datos (primera fila), una fecha (segunda fila) y una descripción (tercera fila) del conjunto de los datos. En la tabla se puede identificar la independencia que existe entre la lógica de los datos (representado por la columna DESCRIPCIÓN del dato) y el almacenamiento físico (estructura de almacenamiento representado por las columnas TIPO DE DATO y TAMAÑO)
     .titulo-segundo.mt-5
       #t_1_1.h4 1.1  Tipos de datos y restricción de no nulidad
@@ -228,32 +230,34 @@
       img(src="@/assets/template/tema-1-5.png" alt="Texto que describa la imagen")
     p.mt-4 Según el tipo de sistema gestor de bases de datos cada uno define sus tipos de datos que, de alguna forma, son muy parecidos entre ellos, o existen equivalencias, las diferencias son pocas y están relacionadas con aspectos técnicos del almacenamiento, se pueden ver más detalles de cada uno de ellos en los sitios oficiales de cada motor de base de datos:
     .tabla-b.color-acento-contenido.mb-0.mt-5
-      table
-        tr.bg-secundario.text-white
-          th 
-            .h4.mb-0.text-center Nombre
-          td 
-            .h4.mb-0.text-center Enlace de acceso
-        tr
-          th ORACLE
-          td 
-            a(href=`https://docs.oracle.com/cd/E11882_01/server.112/e41085/sqlqr06002.htm#SQLQR959` target="_blank")
-                span https://docs.oracle.com/cd/E11882_01/server.112/e41085/sqlqr06002.htm#SQLQR959
-        tr
-          th PostgreSQL
-          td 
-            a(href=`https://www.postgresql.org/docs/13/datatype.html#DATATYPE-TABLE` target="_blank")
-              span https://www.postgresql.org/docs/13/datatype.html#DATATYPE-TABLE
-        tr
-          th MySQL
-          td 
-            a(href=`https://dev.mysql.com/doc/refman/8.0/en/data-types.html` target="_blank")
-              span https://dev.mysql.com/doc/refman/8.0/en/data-types.html
-        tr
-          th SQLServer
-          td 
-            a(href=`https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15` target="_blank")
-              span https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15
+    .row
+      .col-12
+        table
+          tr.bg-secundario.text-white
+            th 
+              .h4.mb-0.text-center Nombre
+            td 
+              .h4.mb-0.text-center Enlace de acceso
+          tr
+            th ORACLE
+            td 
+              a(href=`https://docs.oracle.com/cd/E11882_01/server.112/e41085/sqlqr06002.htm#SQLQR959` target="_blank" style="word-wrap: break-word;")
+                  span https://docs.oracle.com/cd/E11882_01/server.112/e41085/sqlqr06002.htm#SQLQR959
+          tr
+            th PostgreSQL
+            td 
+              a(href=`https://www.postgresql.org/docs/13/datatype.html#DATATYPE-TABLE` target="_blank" style="word-wrap: break-word;")
+                span https://www.postgresql.org/docs/13/datatype.html#DATATYPE-TABLE
+          tr
+            th MySQL
+            td 
+              a(href=`https://dev.mysql.com/doc/refman/8.0/en/data-types.html` target="_blank" style="word-wrap: break-word;")
+                span https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+          tr
+            th SQLServer
+            td 
+              a(href=`https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15` target="_blank" style="word-wrap: break-word;")
+                span https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15
     p.mt-4 Existen varios tipos de restricciones, por ahora se verá la restricción de longitud, por ejemplo: 
     .row.mt-5
       .col-6.col-md-4.py-4.px-5.bg-gris
@@ -275,11 +279,11 @@
         .row
           .col-12.col-lg-6
             h4 Bases de datos con estructura jerárquica
-            p En las primeras bases de datos empleadas son las de estructura jerárquica. Las relaciones entre registros forman una estructura en árbol, en la actualidad un ejemplo de estas bases datos es la base datos LDAP usada en la actualidad para sistema de directorio de datos tales como usuario, dispositivos, nombres, contraseñas, direcciones etc. dentro de una red de computadores.
+            p En las primeras bases de datos empleadas son las de estructura jerárquica. Las relaciones entre registros forman una estructura en árbol, en la actualidad un ejemplo de estas bases de datos es la base de datos LDAP usada en la actualidad para el sistema de directorio de datos tales como usuario, dispositivos, nombres, contraseñas, direcciones etc., dentro de una red de computadores.
           .col-8.col-lg-6.offset-2.offset-lg-0
             figure.mt-5
               img(src="@/assets/template/tema-1-11.png" alt="Texto que describa la imagen")
-              p.mt-3(style='font-size: 10px;') Nota. Tomada de https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_bases_de_datos#/media/Archivo:DB_jerarquica.png
+              p.mt-3(style='font-size: 10px; word-wrap: break-word;') Nota. Tomada de https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_bases_de_datos#/media/Archivo:DB_jerarquica.png
       .py-4.py-md-5(titulo="Bases de datos con estructura en red" :icono="require('@/assets/template/tema-1-7.svg')")
         .row
           .col-12.col-lg-6
@@ -318,82 +322,84 @@
       #t_1_3.h4 1.3  Clasificación de bases de datos
     p.mt-4 Según la naturaleza de los datos que se almacenan en la base de datos, se pueden clasificar; la siguiente tabla muestra una compilación de estas clasificaciones.
     .tabla-b.color-acento-contenido.mb-0.mt-5
-      table(style="border: solid 1px #e8e8e8;").text-center
-        tr.bg-secundario.text-white.text-center
-          th 
-            .h4.mb-0.text-center Criterio de clasificación
-          td 
-            .h4.mb-0.text-center Clasificación
-          td
-            .h4.mb-0.text-center Descripción
-        tr(style="background-color: transparent; border: solid 1px #e8e8e8;").text-center
-          th(rowspan='2') Según la variabilidad de los datos
-          th Bases de datos estáticas
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 Son bases de datos, cuyos datos son históricos, es decir ya no se pueden modificar, se usan comúnmente para estudiar el comportamiento de los datos a través del tiempo.
-                  li.mb-0.d-block.mt-1
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 Generalmente, a este tipo de bases de datos se les llama bodega de datos.
-                  li.mb-0.d-block.mt-1
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 Muchas de estas bases de datos se almacenan en cubos para su análisis, se les conoce como OLAP es el acrónimo en inglés de procesamiento analítico en línea (On-Line Analytical Processing).
-        tr.text-center
-          th Bases de datos dinámicas
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 Estos datos se almacenan y pueden ser modificados, agregados, borrados y consultados en cualquier momento, por ejemplo: un sistema de facturación o el sistema Sofiaplus del SENA.
-                  li.mb-0.d-block.mt-1
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 A estos sistemas se les denomina transaccionales, porque cada operación de guardar, borrar o editar se configura como una transacción. OLTP es la sigla en inglés de Procesamiento de Transacciones en Línea (On-Line Transaction Processing).
-        tr(style="background-color: transparent; border: solid 1px #e8e8e8;").text-center
-          th(rowspan='2') Según el contenido
-          th Bases de datos documentales
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 Permiten la indexación a texto completo, y en líneas generales realizar búsquedas más potentes.
-        tr.text-center
-          th Base de datos deductivos
-          td 
-            .row
-              .col-sm.mb-5.mb-sm-0
-                ul.lista-ul
-                  li.mb-0.d-block
-                    .row
-                      .col-1.p-0
-                        i.fas.fa-angle-right.color-azul
-                      .col-10.p-0(style='margin-left: -10px; text-align: left;')
-                        p.mb-2 Un sistema de base de datos deductivos, es un sistema de base de datos, pero con la diferencia de que permite hacer deducciones a través de inferencias. Se basa principalmente en reglas y hechos que son almacenados en la base de datos. También las bases de datos deductivas son llamadas base de datos lógica, a raíz de que se basan en lógica matemática.
+    .row
+      .col-12
+        table(style="border: solid 1px #e8e8e8; word-wrap: break-word;").text-center
+          tr.bg-secundario.text-white.text-center
+            th 
+              .h4.mb-0.text-center Criterio de clasificación
+            td 
+              .h4.mb-0.text-center Clasificación
+            td
+              .h4.mb-0.text-center Descripción
+          tr(style="background-color: transparent; border: solid 1px #e8e8e8;").text-center
+            th(rowspan='2') Según la variabilidad de los datos
+            th Bases de datos estáticas
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vineta-lm.m-0
+                          p.mb-2 Son bases de datos, cuyos datos son históricos, es decir ya no se pueden modificar, se usan comúnmente para estudiar el comportamiento de los datos a través del tiempo.
+                    li.mb-0.d-block.mt-1
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-11.vineta-lm
+                          p.mb-2 Generalmente, a este tipo de bases de datos se les llama bodega de datos.
+                    li.mb-0.d-block.mt-1
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vineta-lm
+                          p.mb-2 Muchas de estas bases de datos se almacenan en cubos para su análisis, se les conoce como OLAP es el acrónimo en inglés de procesamiento analítico en línea (On-Line Analytical Processing).
+          tr.text-center
+            th Bases de datos dinámicas
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vineta-lm
+                          p.mb-2 Estos datos se almacenan y pueden ser modificados, agregados, borrados y consultados en cualquier momento, por ejemplo: un sistema de facturación o el sistema Sofiaplus del SENA.
+                    li.mb-0.d-block.mt-1
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vineta-lm
+                          p.mb-2 A estos sistemas se les denomina transaccionales, porque cada operación de guardar, borrar o editar se configura como una transacción. OLTP es la sigla en inglés de Procesamiento de Transacciones en Línea (On-Line Transaction Processing).
+          tr(style="background-color: transparent; border: solid 1px #e8e8e8;").text-center
+            th(rowspan='2') Según el contenido
+            th Bases de datos documentales
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vineta-lm
+                          p.mb-2 Permiten la indexación a texto completo, y en líneas generales realizar búsquedas más potentes.
+          tr.text-center
+            th Base de datos deductivos
+            td 
+              .row
+                .col-sm.mb-5.mb-sm-0
+                  ul.lista-ul
+                    li.mb-0.d-block
+                      .row
+                        .col-1
+                          i.fas.fa-angle-right.color-azul
+                        .col-10.vineta-lm
+                          p.mb-2 Un sistema de base de datos deductivos, es un sistema de base de datos, pero con la diferencia de que permite hacer deducciones a través de inferencias. Se basa principalmente en reglas y hechos que son almacenados en la base de datos. También las bases de datos deductivas son llamadas base de datos lógica, a raíz de que se basan en lógica matemática.
     p.mt-4 Pueden existir otras clasificaciones orientadas al ámbito de uso, sin embargo, se presentan las más comunes en el ejercicio del desarrollo de software. Las bases de datos relacionales es de obligatorio dominio en cualquiera de los casos, ya que los conceptos de esta son reutilizables en casi todos los otros tipos.
     .titulo-segundo.mt-5
       #t_1_4.h4 1.4  Sistema de gestión de bases de datos    
