@@ -99,15 +99,15 @@
     p.mt-4 El principio de no repetición de datos indica que se deben identificar todos los datos que se repiten y se puede ver en la siguiente figura, tenido en cuenta los colores de sombreado como se muestra, es de notar que el nit_proveedor son iguales en todos los registros que tienen el mismo valor de correo, nombres y teléfono. 
     .h4.mt-5.text-center Dependencia de nit_proveedor con datos del proveedor
     figure.mt-4  
-      img(src="@/assets/template/tema-3-5.png" alt="Texto que describa la imagen")
+      img(src="@/assets/template/tema-3-5.gif" alt="Texto que describa la imagen")
     p.mt-4 También en la figura a continuación la columna #[strong código_producto] es la misma para la columna producto, pero difiere del precio que cada proveedor ofrece del mismo.
     .h4.mt-5.text-center Dependencia de código_producto_ con datos del producto
     figure.mt-4
-      img(src="@/assets/template/tema-3-6.png" alt="Texto que describa la imagen")
+      img(src="@/assets/template/tema-3-6.gif" alt="Texto que describa la imagen")
     p.mt-4 La dependencia #[strong código_producto] no se cumple para el precio del producto, por lo tanto, dice que a cada proveedor y producto debe existir un precio distinto como se ve en la siguiente figura.
     .h4.mt-5.text-center Dependencia de nit_proveedor, código_producto_ con precio del producto
     figure.mt-4
-      img(src="@/assets/template/tema-3-7.png" alt="Texto que describa la imagen")
+      img(src="@/assets/template/tema-3-7.gif" alt="Texto que describa la imagen")
     p.mt-4 En la siguiente tabla se observan las dependencias detectadas.
     .h6.mt-5 Dependencias funcionales
     .row.mt-4
@@ -235,7 +235,7 @@
     .row.mt-5
       .col-12.col-lg-9
         p En este diagrama se presenta una posible solución:
-        p.mt-3 La relación entre persona y estudiante corresponde al caso estudiado en las relaciones de uno a uno (entre persona y empleado del banco) de la figura 20. 
+        p.mt-3 La relación entre persona y estudiante corresponde al caso estudiado en las relaciones de uno a uno (entre persona y empleado del banco) de la figura "Diagrama relacional 1:1". 
         p.mt-3 El tema se vuelve complejo porque se debe analizar si aplica lo mismo para autor:
         p.mt-3 Al mapear estas entidades a diagrama relacional resultan 3 tablas (estudiante, persona y autor), pero autor solo tendría una única columna y al no tener atributos adicionales relacionados con el autor es prácticamente lo mismo que tener la tabla persona, por lo tanto, no es conveniente dejarlo de esta forma y más bien relacionar la publicación directamente con la entidad persona.
         p.mt-3 Se debe estudiar detenidamente el diagrama entidad relación, por varios minutos, asegúrese que comprende el porqué de cada elemento y su multiplicidad. Antes de continuar, realice a mano alzada diagrame el modelo relacional:
@@ -264,7 +264,7 @@
       #t_3_3.h4 3.3  Reglas de integridad
     figure.mt-5
       img(src="@/assets/template/tema-3-18.png" alt="Texto que describa la imagen")
-    p.mt-4 Cuando se define un atributo, sin saber, se está escogiendo para él un dominio es decir un conjunto de valores que puede tener. Por ejemplo: en MySQL cuando se elige un atributo de tipo entero (INT) los posibles valores que puede tener esa columna van desde -2147483648 hasta 2147483647, es decir valores positivos o negativos, de manera que si se quieren sólo valores positivos se deben definirlos como entero sin signo (UNSIGNED INT), por lo tanto, los valores van desde 0 hasta 4294967295; en el siguiente enlace se puede ver un dato completo:
+    p.mt-4 Cuando se define un atributo, sin saber, se está escogiendo para él un dominio, es decir, un conjunto de valores que puede tener. Por ejemplo: en MySQL cuando se elige un atributo de tipo entero (INT) los posibles valores que puede tener esa columna van desde -2147483648 hasta 2147483647, es decir valores positivos o negativos, de manera que si se quieren sólo valores positivos se deben definirlos como entero sin signo (UNSIGNED INT), por lo tanto, los valores van desde 0 hasta 4294967295; en el siguiente enlace se puede ver un dato completo:
     .tarjeta.color-acento-botones.p-3.mt-5.bg-degradado-azul
       .row.justify-content-around.align-items-center
         .col-3.col-sm-2.col-lg-1
@@ -283,7 +283,7 @@
         //- LineaTiempoD debe ir acompañado de una de una de estas clases => 
         //- .color-primario, .color-secundario, .color-acento-contenido, .color-acento-botones
         LineaTiempoD
-          p.text-small(numero="1" titulo="Criterio de NULIDAD") Cuando en una fila un atributo (columna) es desconocido, se dice que es nulo. Un nulo no representa el valor cero (0) ni una cadena vacía (“”) ya que éstos son valores tienen un significado o valor. El nulo significa ausencia de información, bien porque al insertar la fila se desconocía el valor del atributo, o tal vez porque para dicha fila el atributo no tiene valor. Debido a que los nulos no son valores, deben tratarse de forma particular, lo que causa problemas de implementación. Actualmente casi todos los SGDB soportan valores nulos.
+          p.text-small(numero="1" titulo="Criterio de NULIDAD") Cuando en una fila un atributo (columna) es desconocido, se dice que es nulo. Un nulo no representa el valor cero (0) ni una cadena vacía (“”) ya que éstos son valores que tienen un significado o valor. El nulo significa ausencia de información, bien porque al insertar la fila se desconocía el valor del atributo, o tal vez porque para dicha fila el atributo no tiene valor. Debido a que los nulos no son valores, deben tratarse de forma particular, lo que causa problemas de implementación. Actualmente casi todos los SGDB soportan valores nulos.
           
           p.text-small(numero="2" titulo="Integridad de entidad") Ninguno de los atributos o columnas que componen una llave primaria debe ser NULO. Es decir, una clave primaria es irreducible para identificar de modo único una fila, el que sea irreducible significa que ningún subconjunto de la clave primaria sirve para identificar inequívocamente la dial: a la fila o tupla. Si se permitiera valor nulo en una columna que hace parte de la llave primaria, esta estaría contradiciendo la irreductibilidad de una llave primaria; esto no aplica para claves alternativas, solo para la clave primaria.
           
@@ -311,7 +311,7 @@
               img(src="@/assets/template/tema-3-27.svg" alt="Texto que describa la imagen")
           .col
             .h4.mt-3 Respuesta 
-            p.mt-2 La respuesta a las cuestiones planeadas es que en cualquiera de las operaciones de borrado o actualización del dato se incurrirá en una violación de la integridad referencial de la tabla estudiante, ya que no habrá manera de conocer los datos de complementarios del estudiante que se encuentran en la tabla persona. 
+            p.mt-2 La respuesta a las cuestiones planteadas es que en cualquiera de las operaciones de borrado o actualización del dato se incurrirá en una violación de la integridad referencial de la tabla estudiante, ya que no habrá manera de conocer los datos complementarios del estudiante que se encuentran en la tabla persona. 
             p.mt-3 Para evitar estos problemas de inconsistencia, los sistemas gestores de bases de datos permiten definir unas reglas cuando se borra o actualiza un dato que es referencia foránea de otra tabla. 
     .tabla-a.color-secundario.mt-5 
       table
@@ -388,7 +388,7 @@
       #t_3_4.h4 3.4  Lenguajes de los sistemas administradores de bases de datos    
     figure.mt-5
       img(src="@/assets/template/tema-3-25.png" alt="Texto que describa la imagen")
-    p.mt-4 Los sistemas gestores de bases de datos emplean un lenguaje que se denomina SQL que corresponde al nombre en inglés (Structured Query Language), Generalmente, cuando un SGBD relacional implementa el lenguaje SQL, todas las acciones, y operaciones se llevan a cabo en el sistema mediante sentencias de este lenguaje. Dentro de SQL hay varios tipos de sentencias que se agrupan en cuatro conjuntos.
+    p.mt-4 Los sistemas gestores de bases de datos emplean un lenguaje que se denomina SQL que corresponde al nombre en inglés (Structured Query Language). Generalmente, cuando un SGBD relacional implementa el lenguaje SQL, todas las acciones, y operaciones se llevan a cabo en el sistema mediante sentencias de este lenguaje. Dentro de SQL hay varios tipos de sentencias que se agrupan en cuatro conjuntos.
     .h4.mt-5.text-center      Conjunto bases de datos SQL
     .col-10.col-md-8.offset-1.offset-md-2.mt-4
       figure
@@ -397,7 +397,7 @@
       .col-10.offset-1 
         .cajon.color-secundario.bg-secundario-op40.p-4
           .h4 Sentencias de definición de datos (DDL)
-          p.mt-1 Son las sentencias que permiten crear tablas, alterar su definición y eliminarlas. En una base de datos relacional existen otros tipos de objetos además de las tablas, como las vistas, los índices y los disparadores. Las sentencias para crear, alterar y eliminar vistas e índices también pertenecen a este conjunto de sentencia se les denomina #[strong DDL] del inglés #[strong D]ata #[strong D]efinition #[strong L]anguage.
+          p.mt-1 Son las sentencias que permiten crear tablas, alterar su definición y eliminarlas. En una base de datos relacional existen otros tipos de objetos además de las tablas, como las vistas, los índices y los disparadores. Las sentencias para crear, alterar y eliminar vistas e índices también pertenecen a este conjunto de sentencia y se les denomina #[strong DDL] del inglés #[strong D]ata #[strong D]efinition #[strong L]anguage.
           .h5.mt-3 Ejemplo DDL
           p.mt-1 Para crear la tabla persona de la figura «Modelo relacional», quedaría de la siguiente forma: 
     .row.mt-5

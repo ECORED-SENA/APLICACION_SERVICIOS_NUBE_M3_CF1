@@ -159,7 +159,7 @@
     .h6.mt-5 Diagrama de entidad de publicaciones bibliográficas
     figure.mt-4
       img(src="@/assets/template/tema-2-13.png" alt="Texto que describa la imagen")
-    p.mt-4 Como se observa en la figura, la entidad publicación tiene una llave primaria llamada identificación, y existe una relaciona llamada #[strong autor], y representa que unas persona pueden ser autor de una o muchas publicaciones, y que una publicación puede ser de autoría de una o muchas personas, la multiplicidad en este caso es de muchos a muchos y se representa como N:N.
+    p.mt-4 Como se observa en la figura, la entidad publicación tiene una llave primaria llamada identificación, y existe una relaciona llamada #[strong autor], y representa que una persona pueden ser autor de una o muchas publicaciones, y que una publicación puede ser de autoría de una o muchas personas, la multiplicidad en este caso es de muchos a muchos y se representa como N:N.
     .row.mt-5
       .col-8.offset-2 
         .cajon.color-secundario.bg-secundario-op10.p-4
@@ -220,7 +220,7 @@
         figure
           img(src="@/assets/template/tema-2-17.png" alt="Texto que describa la imagen")
       .col-12.col-lg-8.mt-3.mt-lg-0.align-self-center
-        p Como se puede inferir de la figura 20, se crea una tabla donde se relacionan los datos de las personas que son empleados del banco, a través de una columna que se llama #[strong id_persona], pero es común entre algunos diseñadores ponerle el nombre que los relacione con la tabla a la que pertenece, es decir #[strong id_empleado], pero esto queda al criterio del diseñador. 
+        p Como se puede inferir de la figura "Diagrama relacional 1:1", se crea una tabla donde se relacionan los datos de las personas que son empleados del banco, a través de una columna que se llama #[strong id_persona], pero es común entre algunos diseñadores ponerle el nombre que los relacione con la tabla a la que pertenece, es decir #[strong id_empleado], pero esto queda al criterio del diseñador. 
 </template>
 
 <script>

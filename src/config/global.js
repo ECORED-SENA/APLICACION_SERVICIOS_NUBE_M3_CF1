@@ -197,7 +197,7 @@ export default {
   ],
   glosario: [
     {
-      termino: 'Base datos',
+      termino: 'Base de datos',
       significado:
         'Conjunto ordenado y finito de operaciones que permite hallar la solución de un problema.',
     },
