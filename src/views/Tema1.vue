@@ -168,64 +168,66 @@
               .bloque-texto-a__texto.p-4
                 p Existen muchos tipos de datos y varían según el SGDB, ya que cada sistema gestor define sus propios tipos de datos, aunque existen las equivalencias notables y otras no tan notables, se observa una tabla que relacione el tipo de datos según los SGDB más comunes del mercado como ORACLE, PostgeSQL, MySQL y SQLServer. 
     .h6.mt-5 Tipos de datos según bases de datos
-    .tabla-a.color-acento-botones.mt-5 
-      table
-        thead
-          tr
-            th Tipo de dato
-            th ORACLE
-            th PostgreSQL
-            th MySQL
-            th SQLServer
-        tbody.text-center
-          tr
-            td.py-3 Cadena caracteres
-            td VARCHAR2
-            td CHARACTER VARYING
-            td VARCHAR
-            td VARCHAR
-          tr
-            td.py-3 Cadena texto
-            td TEXT
-            td TEXT
-            td TEXT
-            td NTEXT
-          tr
-            td.py-3 Entero pequeño
-            td SMALLINT
-            td SMALLINT
-            td SMALLINT
-            td SMALLINT
-          tr
-            td.py-3 Entero
-            td INTEGER
-            td INTEGER
-            td INT
-            td INT
-          tr
-            td.py-3 Fecha
-            td DATE
-            td DATE
-            td DATE
-            td DATE
-          tr
-            td.py-3 Fecha y hora
-            td DATE
-            td TIMESTAMP WITH TIME ZONE
-            td DATETIME
-            td DATETIME2
-          tr
-            td.py-3 Hora
-            td DATE
-            td TIME
-            td TIME
-            td TIME
-          tr
-            td.py-3 Entero con decimales
-            td FLOAT
-            td REAL
-            td FLOAT
-            td FLOAT
+    .row
+      .col-12
+        .tabla-a.color-acento-botones.mt-5.scroll-x-tabla
+          table
+            thead
+              tr
+                th Tipo de dato
+                th ORACLE
+                th PostgreSQL
+                th MySQL
+                th SQLServer
+            tbody.text-center
+              tr
+                td.py-3 Cadena caracteres
+                td VARCHAR2
+                td CHARACTER VARYING
+                td VARCHAR
+                td VARCHAR
+              tr
+                td.py-3 Cadena texto
+                td TEXT
+                td TEXT
+                td TEXT
+                td NTEXT
+              tr
+                td.py-3 Entero pequeño
+                td SMALLINT
+                td SMALLINT
+                td SMALLINT
+                td SMALLINT
+              tr
+                td.py-3 Entero
+                td INTEGER
+                td INTEGER
+                td INT
+                td INT
+              tr
+                td.py-3 Fecha
+                td DATE
+                td DATE
+                td DATE
+                td DATE
+              tr
+                td.py-3 Fecha y hora
+                td DATE
+                td TIMESTAMP WITH TIME ZONE
+                td DATETIME
+                td DATETIME2
+              tr
+                td.py-3 Hora
+                td DATE
+                td TIME
+                td TIME
+                td TIME
+              tr
+                td.py-3 Entero con decimales
+                td FLOAT
+                td REAL
+                td FLOAT
+                td FLOAT
     figure.mt-5
       img(src="@/assets/template/tema-1-5.png" alt="Texto que describa la imagen")
     p.mt-4 Según el tipo de sistema gestor de bases de datos cada uno define sus tipos de datos que, de alguna forma, son muy parecidos entre ellos, o existen equivalencias, las diferencias son pocas y están relacionadas con aspectos técnicos del almacenamiento, se pueden ver más detalles de cada uno de ellos en los sitios oficiales de cada motor de base de datos:

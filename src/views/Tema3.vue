@@ -313,76 +313,78 @@
             .h4.mt-3 Respuesta 
             p.mt-2 La respuesta a las cuestiones planteadas es que en cualquiera de las operaciones de borrado o actualización del dato se incurrirá en una violación de la integridad referencial de la tabla estudiante, ya que no habrá manera de conocer los datos complementarios del estudiante que se encuentran en la tabla persona. 
             p.mt-3 Para evitar estos problemas de inconsistencia, los sistemas gestores de bases de datos permiten definir unas reglas cuando se borra o actualiza un dato que es referencia foránea de otra tabla. 
-    .tabla-a.color-secundario.mt-5 
-      table
-        thead
-          tr
-            th Regla de borrado: 
-            th Regla de edición: 
-        tbody
-          tr
-            td.p-0
-              figure
-                img(src="@/assets/template/tema-3-23.png" alt="Texto que describa la imagen")
-              p.mt-4.px-5 Define el comportamiento a la pregunta: ¿qué ocurre si se intenta borrar la fila referenciada por la clave foránea de otra tabla? Para lo cual el SGBD implementa una de las siguientes opciones: 
-              .row.mt-3.px-5
-                  .col-sm.mb-5.mb-sm-0
-                    ul.lista-ul.mb-0
-                      li.mb-0.d-block
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Restringir: no se permite borrar la fila referenciada.
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Cascada: se borra la fila referenciada y también se borran las filas que la referencian mediante la clave foránea en la otra tabla.
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Poner null: se borra la fila referenciada y las filas que la referenciaban ponen en nulo la clave foránea (solo si acepta nulos).
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Valor por defecto: se borra la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla.
-            td.p-0
-              figure
-                img(src="@/assets/template/tema-3-24.png" alt="Texto que describa la imagen")
-              p.mt-4.px-5 Define el comportamiento a la pregunta: ¿qué sucede si se intenta modificar el valor de la clave primaria de la fila referenciada por la clave foránea por otra tabla?
-              .row.mt-3.px-5
-                  .col-sm.mb-5.mb-sm-0
-                    ul.lista-ul.mb-0
-                      li.mb-0.d-block
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Restringir: no se permite editar la fila referenciada.
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Cascada: se actualiza la fila referenciada y también se actualiza las filas que la referencian mediante la clave foránea en la otra tabla.
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Poner null: se actualiza la fila referenciada y las filas que la referenciaban ponen a nulo la clave foránea (solo si acepta nulos).
-                      li.mb-0.d-block.mt-1
-                        .row
-                          .col-1
-                            i.fas.fa-angle-right.color-amarillo
-                          .col-10.vineta-lm
-                            p.mb-2 Valor por defecto: se edita la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla
+    .row
+      .col-12
+        .tabla-a.color-secundario.mt-5.scroll-x-tabla 
+          table
+            thead
+              tr
+                th Regla de borrado: 
+                th Regla de edición: 
+            tbody
+              tr
+                td.p-0
+                  figure
+                    img(src="@/assets/template/tema-3-23.png" alt="Texto que describa la imagen")
+                  p.mt-4.px-5.alto-mob Define el comportamiento a la pregunta: ¿qué ocurre si se intenta borrar la fila referenciada por la clave foránea de otra tabla? Para lo cual el SGBD implementa una de las siguientes opciones: 
+                  .row.mt-3.px-5
+                      .col-sm.mb-5.mb-sm-0
+                        ul.lista-ul.mb-0
+                          li.mb-0.d-block
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Restringir: no se permite borrar la fila referenciada.
+                          li.mb-0.d-block.mt-1
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Cascada: se borra la fila referenciada y también se borran las filas que la referencian mediante la clave foránea en la otra tabla.
+                          li.mb-0.d-block.mt-1
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Poner null: se borra la fila referenciada y las filas que la referenciaban ponen en nulo la clave foránea (solo si acepta nulos).
+                          li.mb-0.d-block.mt-1
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Valor por defecto: se borra la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla.
+                td.p-0
+                  figure
+                    img(src="@/assets/template/tema-3-24.png" alt="Texto que describa la imagen")
+                  p.mt-4.px-5.alto-mob Define el comportamiento a la pregunta: ¿qué sucede si se intenta modificar el valor de la clave primaria de la fila referenciada por la clave foránea por otra tabla?
+                  .row.mt-3.px-5
+                      .col-sm.mb-5.mb-sm-0
+                        ul.lista-ul.mb-0
+                          li.mb-0.d-block
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Restringir: no se permite editar la fila referenciada.
+                          li.mb-0.d-block.mt-1
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Cascada: se actualiza la fila referenciada y también se actualiza las filas que la referencian mediante la clave foránea en la otra tabla.
+                          li.mb-0.d-block.mt-1
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Poner null: se actualiza la fila referenciada y las filas que la referenciaban ponen a nulo la clave foránea (solo si acepta nulos).
+                          li.mb-0.d-block.mt-1
+                            .row
+                              .col-1
+                                i.fas.fa-angle-right.color-amarillo
+                              .col-10.vineta-lm
+                                p.mb-2 Valor por defecto: se edita la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla
     p.mt-4 De esta forma, una vez definida la estructura del modelo de datos de datos, se debe determinar el comportamiento de estas operaciones, lo cual generalmente responde a requerimiento del sistema de información. 
     .titulo-segundo.mt-5
       #t_3_4.h4 3.4  Lenguajes de los sistemas administradores de bases de datos    
