@@ -12,20 +12,20 @@
     p.mt-3 A continuación, se podrá visualizar el paso a paso de la descarga e instalación del gestor MySQL Workbench y Web XAMPP:
     figure.mt-5
       .video
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/s83H_lm9OfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     figure.mt-4
       .video
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/-HQS1yqzR4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     p.mt-5 Finalmente, se debe revisar cuidadosamente cómo usar MySQL Workbench para diseñar la base de datos del Modelo relacional de la biblioteca del numeral 3.2:
     figure.mt-5
       .video
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/WaxTd9LeiMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     figure.mt-4
       .video
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/vcDJmVMT-ls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     figure.mt-4
       .video
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/2L91WMqw96A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/i3iUyEEn3hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     
 
 
