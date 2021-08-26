@@ -217,7 +217,7 @@
     .h4.mt-5 Problema:
     figure.mt-4
       img(src="@/assets/template/tema-3-11.png" alt="Texto que describa la imagen")
-    p.mt-4 Se necesita de gestionar una biblioteca escolar y nuestro cliente quiere tener ciertas herramientas a su disposición para controlar publicaciones tales como libros, revistas, folletos; también llevar un registro de los estudiantes y préstamos. Adicionalmente se necesita un control de los ejemplares de cada libro o publicación, su ubicación y su estado, registrar la retirada de libros por préstamo y restitución de ejemplares, para esto necesita información sobre editoriales datos como dirección, teléfono y nombre de la editorial.
+    p.mt-4 Se necesita gestionar una biblioteca escolar y nuestro cliente quiere tener ciertas herramientas a su disposición para controlar publicaciones tales como libros, revistas, folletos; también llevar un registro de los estudiantes y préstamos. Adicionalmente se necesita un control de los ejemplares de cada libro o publicación, su ubicación y su estado, registrar la retirada de libros por préstamo y restitución de ejemplares, para esto necesita información sobre editoriales datos como dirección, teléfono y nombre de la editorial.
     .row
       .col-12.col-lg-7.align-self-center
         p De cada publicación se pueden tener varios ejemplares, por ejemplo: del libro Nacho lee la biblioteca tiene 5 ejemplares, también de cada publicación se debe conocer, su autor o autores, el tema que trata la publicación (geografía, física, matemática, etc.), la editorial. Cada libro tiene un título, idioma, formato (digital web, impreso, digital CD), código ISBN y fecha de publicación.
@@ -236,9 +236,9 @@
       .col-12.col-lg-9
         p En este diagrama se presenta una posible solución:
         p.mt-3 La relación entre persona y estudiante corresponde al caso estudiado en las relaciones de uno a uno (entre persona y empleado del banco) de la figura "Diagrama relacional 1:1". 
-        p.mt-3 El tema se vuelve complejo porque se debe analizar si aplica lo mismo para autor:
+        p.mt-3 El tema se vuelve complejo porque se debe analizar si aplica lo mismo para autor.
         p.mt-3 Al mapear estas entidades a diagrama relacional resultan 3 tablas (estudiante, persona y autor), pero autor solo tendría una única columna y al no tener atributos adicionales relacionados con el autor es prácticamente lo mismo que tener la tabla persona, por lo tanto, no es conveniente dejarlo de esta forma y más bien relacionar la publicación directamente con la entidad persona.
-        p.mt-3 Se debe estudiar detenidamente el diagrama entidad relación, por varios minutos, asegúrese que comprende el porqué de cada elemento y su multiplicidad. Antes de continuar, realice a mano alzada diagrame el modelo relacional:
+        p.mt-3 Se debe estudiar detenidamente el diagrama entidad relación, por varios minutos, asegúrese que comprende el porqué de cada elemento y su multiplicidad. Antes de continuar, realice a mano alzada el diagrama del modelo relacional.
       .col-3.d-none.d-lg-block.align-self-center
         figure
           img(src="@/assets/template/tema-3-14.svg" alt="Texto que describa la imagen")
@@ -264,7 +264,7 @@
       #t_3_3.h4 3.3  Reglas de integridad
     figure.mt-5
       img(src="@/assets/template/tema-3-18.png" alt="Texto que describa la imagen")
-    p.mt-4 Cuando se define un atributo, sin saber, se está escogiendo para él un dominio, es decir, un conjunto de valores que puede tener. Por ejemplo: en MySQL cuando se elige un atributo de tipo entero (INT) los posibles valores que puede tener esa columna van desde -2147483648 hasta 2147483647, es decir valores positivos o negativos, de manera que si se quieren sólo valores positivos se deben definirlos como entero sin signo (UNSIGNED INT), por lo tanto, los valores van desde 0 hasta 4294967295; en el siguiente enlace se puede ver un dato completo:
+    p.mt-4 Cuando se define un atributo, sin saber, se está escogiendo para él un dominio, es decir, un conjunto de valores que puede tener. Por ejemplo: en MySQL cuando se elige un atributo de tipo entero (INT) los posibles valores que puede tener esa columna van desde -2147483648 hasta 2147483647, es decir valores positivos o negativos, de manera que si se quieren solo valores positivos se deben definir como entero sin signo (UNSIGNED INT), por lo tanto, los valores van desde 0 hasta 4294967295; en el siguiente enlace se puede ver un dato completo:
     .tarjeta.color-acento-botones.p-3.mt-5.bg-degradado-azul
       .row.justify-content-around.align-items-center
         .col-3.col-sm-2.col-lg-1
@@ -385,7 +385,7 @@
                                 i.fas.fa-angle-right.color-amarillo
                               .col-10.vineta-lm
                                 p.mb-2 Valor por defecto: se edita la fila referenciada y las filas que la referenciaban ponen en la clave foránea el valor por defecto defina la regla
-    p.mt-4 De esta forma, una vez definida la estructura del modelo de datos de datos, se debe determinar el comportamiento de estas operaciones, lo cual generalmente responde a requerimiento del sistema de información. 
+    p.mt-4 De esta forma, una vez definida la estructura del modelo de datos, se debe determinar el comportamiento de estas operaciones, lo cual generalmente responde a requerimiento del sistema de información. 
     .titulo-segundo.mt-5
       #t_3_4.h4 3.4  Lenguajes de los sistemas administradores de bases de datos    
     figure.mt-5
@@ -411,7 +411,7 @@
         p.mx-5.mb-1 correo #[strong VARCHAR(250) NOT NULL ,]
         p.mx-5.mb-1 #[strong PRIMARY KEY] (id_persona)
         p.mb-2 #[strong );]
-    p.mt-4 Nota: cada atributo se define en una línea separado por una coma, se agregan restricciones de no nulidad (NOT NULL) al final la sentía termina con punto y coma. Ahora, así se borraría esa misma tabla:
+    p.mt-4 Nota: cada atributo se define en una línea separado por una coma, se agregan restricciones de no nulidad (NOT NULL) al final la sentencia termina con punto y coma. Ahora, así se borraría esa misma tabla:
     .row.mt-5
       .col-8.col-md-6.py-4.px-5.bg-gris.offset-2.offset-md-3
         p.mb-2 #[strong DROP TABLE] persona;

@@ -122,7 +122,7 @@
     figure
       img(src="@/assets/template/tema-2-9.png" alt="Texto que describa la imagen")
     p.mt-4 A esta representación se le denomina multiplicidad #[strong 1:N] y se lee de la siguiente forma:  #[strong UNA persona ]es titular de #[strong N cuentas] bancarias, de esta forma una persona puede tener N (que puede ser cero, uno o más de una) cuentas bancarias. Se puede leer en forma inversa que el resultado es el mismo: muchas o varias cuentas bancarias pueden tener un mismo titular. 
-    p.mt-3 Cuando una relación de es uno a muchos y se mapea una un modelo de base de datos relacional, la relación #[strong titular] (rombo) se termina convirtiendo una columna de la tabla de los muchos.
+    p.mt-3 Cuando una relación de es uno a muchos y se mapea un modelo de base de datos relacional, la relación #[strong titular] (rombo) se termina convirtiendo una columna de la tabla de los muchos.
     .h6.mt-5 Tablas de un modelo relacional 1:N
     figure
       img(src="@/assets/template/tema-2-10.png" alt="Texto que describa la imagen")

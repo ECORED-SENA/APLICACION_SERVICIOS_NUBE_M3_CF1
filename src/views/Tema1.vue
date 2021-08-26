@@ -298,7 +298,7 @@
         .row
           .col-12.col-lg-6
             h4 Bases de datos con estructura relacional
-            p Es estas bases de datos son multipropósito, lo que las hace las más extendidas en la industria y más empleadas, pero son las más complejas de aprender; por lo que solo se abordará el diseño e implementación de este tipo de bases de datos. Se basan en tablas como las que se presentó en la figura "Base de datos de llamadas telefónicas" y en la relación de los datos de unas tablas con otras.
+            p Estas bases de datos son multipropósito, lo que las hace las más extendidas en la industria y más empleadas, pero son las más complejas de aprender; por lo que solo se abordará el diseño e implementación de este tipo de bases de datos. Se basan en tablas como las que se presentó en la figura "Base de datos de llamadas telefónicas" y en la relación de los datos de unas tablas con otras.
           .col-8.col-lg-6.offset-2.offset-lg-0
             figure.mt-5
               img(src="@/assets/template/tema-1-13.png" alt="Texto que describa la imagen")
