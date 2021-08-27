@@ -252,10 +252,25 @@
                 img(src="@/assets/template/tema-3-15.svg" alt="Texto que describa la imagen")
             .col-12.col-lg-9
               p.m-0 Una relación de muchos a muchos (N:N) se convierte en una tabla cuya llave primaria es computar por las llaves foráneas de las otras dos tablas. Una relación de uno a muchos (1:N) se convierte en una columna  (llave foránea) de la tabla que tiene los muchos, y finalmente una relación de uno a uno (1:1) se convierte una columna en cualquier (llave foránea) de las dos tablas. 
-    .h4.mt-5 Modelo entidad relación biblioteca
-    figure
-      img(src="@/assets/template/tema-3-16.png" alt="Texto que describa la imagen")
-    p.mt-4 En la siguiente figura se presenta el   modelo en un diagrama relacional, este es importante ya que hace parte de uno de los subproductos que, por petición del cliente, muchas veces es un entregable en un proyecto de software, no es así con el diagrama entidad relación ya que este tipo de diagrama requiere más formas y contiene menos tecnicismos.
+    .row.mt-5
+      .col-10.offset-1
+        .tarjeta.color-acento-botones.p-3.mt-5.bg-degradado-azul
+          .row.justify-content-around.align-items-center
+            .col-3.col-sm-2.col-lg-1
+              img(src="@/assets/template/tema-3-20.svg")
+            .col
+              .row.justify-content-between.align-items-center
+                .col.mb-3.mb-sm-0
+                  .row
+                    .col-3.col-sm-2.col-lg-1
+                      figure
+                        img(src="@/assets/template/tema-3-28.svg").pt-3
+                    .col.px-0.pt-3
+                      p.texto-blanco Anexo. Figura 27 <br> Modelo entidad relación biblioteca
+                .col-sm-auto
+                  a.boton.color-acento-contenido(:href="obtenerLink('/downloads/Modelo_entidad_relacion_biblioteca.pdf')" target="_blank")
+                    span Descargar
+                    i.fas.fa-file-download
     .h4.mt-5 Modelo relacional
     figure.mt-4
       img(src="@/assets/template/tema-3-17.png" alt="Texto que describa la imagen")
